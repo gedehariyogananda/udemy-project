@@ -1,0 +1,643 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Latihan javascript</title>
+</head>
+<body>
+    <script>
+
+        document.writeln("\"hello\\word\"");
+        document.writeln("</br>");
+        document.writeln( 100 );
+        document.writeln("</br>");
+        document.writeln("\'Nama :" + " Gede Hari" + " Yoga Nanda\'");
+        document.writeln("</br>");
+        
+
+        //variabel
+        let fullName = ("Gede" + " " + "Nanda");
+        let middleName = ('Hari');
+
+        document.writeln(fullName);
+        document.writeln("</br>");
+        document.writeln(middleName);
+        document.writeln("</br>");
+
+        middleName = ('Yoga');
+        document.writeln(middleName);
+        document.writeln("</br>");
+        document.writeln("</br>");
+        document.writeln("</br>");
+
+        //variabel const
+
+        const namaGua = ("Gede Hari Yoga Nanda");
+
+        document.writeln(namaGua);
+        document.writeln("</br>");
+        document.writeln(namaGua);
+        document.writeln("</br>");
+        
+        // const namaGua = ("Gede Hari"); EROR IKI DECK GAISO DIAGANTI 
+
+        document.writeln(namaGua);
+        document.writeln("</br>");
+        document.writeln("</br>");
+        document.writeln("</br>");
+        document.writeln("</br>");
+
+
+        //operator matematika javascript
+
+        let nilai= -1 + 3 ;
+        document.writeln(nilai);
+        // variabel baru total 4 skrng nilai e
+        let nilaiAkhir = nilai;
+        //nilai yaitu 4-1 = 3
+        nilai-=1 ;
+        document.writeln("<p>" + "Hasil dari " + nilaiAkhir + " - 1 adalah " + nilai + "</p>");
+        nilaiAkhir=nilai;
+
+        // nilai kali e
+        nilai*=2 ;
+        document.writeln("<p>" + "Hasil dari " + nilaiAkhir + " X 2 adalah " + nilai + "</p>");
+        nilaiAkhir = nilai;
+
+        nilai/=2;
+        document.writeln("<p>" + "Hasil dari " + nilaiAkhir + " % 2 adalah " + nilai + "</p>");
+        nilaiAkhir=nilai;
+
+        nilai%=2;
+        document.writeln("<p>" + "Hasil dari " + nilaiAkhir + " MOD 2 adalah " + nilai + "</p>");
+
+        //operator perbandingan
+
+        // deklarasi nilai ujian dan absensi
+        const totalUjian = 70 ;
+        const totalAbsensi = 76 ;
+
+        // inisialisasi awalan jika lulus harus memenuhi syarat apa
+
+        const lolosUjian = 75 ;
+        const lolosAbsensi = 75;
+
+        // perbandingan agar lulus
+
+        const lulusUjian = lolosUjian < totalUjian; //false atau ga lolos dek
+        document.writeln("<p>" + lulusUjian + " atau jadi anda tidak lolos ujian dick " + "</p> ");
+
+        const lulusAbsensi = lolosAbsensi < totalAbsensi;
+        document.writeln("<p>" + lulusAbsensi + " atau jadi anda tidak lolos absensi dick " + "</p> ");
+
+        const lulus= lulusUjian && lulusAbsensi ;
+        document.writeln(lulus);
+
+        const titikLulus= lulusUjian || lulusAbsensi;
+        document.writeln(titikLulus);
+
+        document.writeln("</br>");
+
+        //string template
+
+        const firstNamee= "gede" ;
+        const middleNamee = "hari" ;
+        const lastNamee = "nanda" ;
+
+        // pakai strip pojok kiri atas keybroard ` atau disebut backtik
+        
+        const stringTemplate =` <p> nama : ${firstNamee} ${middleNamee} ${lastNamee} </p>` ;
+        document.writeln(stringTemplate);
+
+        // untuk mengetahui konsol untuk ngecek
+        console.info(stringTemplate);
+
+        // bisa juga string template untuk operator perbandingan
+
+        const lulus2 = 90 ;
+        const jajalPerbandingan = ` <p> jadi :  ${firstNamee} ${lulus2 < 80} </p>` ;
+        document.writeln(jajalPerbandingan);
+
+        // untuk string template bisa juga untuk multiline string
+        // atau string loss baris dek, lk string petik2 biasa gaiso
+        // menggunakan backtik
+
+
+        const multiLine = `nama saya gede hari yoga nanda
+        cewek saya namanya mayada azizah dan saya sayang dia 
+        hihihihihihihiiiiii`
+
+        document.writeln(multiLine);
+
+        // konversi string to number
+
+        // ini salah nya
+        const value = "1" ;
+        const valiu = 1 ;
+        const sum = value + valiu;
+
+        document.writeln(` <p> ${sum} </p> `); // hasilnya akan 11 padahal kan 1 + 1
+                                               // ini karena data string ditambah data number
+
+        // ini benar
+        const eulav = parseInt("1") ;
+        const uilav = 1 ;
+        const mus = eulav + uilav;
+
+        document.writeln(` <p> ${mus} </p> `); // ini akan membuat hasil 2 karena parseInt akan membuat data berubah dari string tu number
+
+        // ini pembuktian operasi penukaran string
+        document.writeln(` <p> ${parseInt(1.1)} </p> `); // hasil 1 karena dirubah ke integer
+        document.writeln(` <p> ${parseFloat(1.1)} </p> `); // akan ttp 1.1 karena dirubah ke float
+        document.writeln(` <p> ${Number(1.1)} </p> `); // akan dirubah ke data number yaitu terdetect untuk int dan float dan lainnya tidak
+
+        // konversi lgsung to string dpt melalui function toString()
+        const a = 1;
+        const b = 1 ;
+        const tosetering = a.toString() + b.toString();
+         
+        document.writeln(` <p> ${tosetering} </p> `);
+
+        // function NaN not a numbers
+
+        //parseInt dan Float akan mentolerir jika kesalaghan berada di belakang kata benar operasi
+        document.writeln(` <p> ${parseInt("salah")} </p> `); // ini NaN karena sangat salah
+        document.writeln(` <p> ${parseFloat("1.1a")} </p> `); //walau salah tapi depan aman jadi masi ditolerir
+
+        // untuk number tidak mentolerir kesalahan sedikit pun
+        document.writeln(` <p> ${Number("salah")} </p> `);
+        document.writeln(` <p> ${Number("1.1a")} </p> `);
+        document.writeln(` <p> ${Number("1.1")} </p> `); // ini valid 
+
+        // NOTED -> dan jika operator NaN dioperasikan dg bil lain  yg valid maka hasilnya ttp NaN
+
+        // tipe data array yagesyak
+
+        const guaryy = [1,2,"gede", "mayada", true];
+
+        console.table(guaryy);
+
+        guaryy[0]= "maiyo" ; //mengganti array index 0 tapi tetap pada index 0 dan yang sebelumnya datanya akan terganti
+
+        delete guaryy[1]; // data index ke 1 akan terdelet permanen tapi untuk lenght tetap ada sebenarnya datanya
+        // tetapi disini kan hilang index nya tanpa dipindahkan di index sesudah maupun sebelume 
+        // tp bisa kita masukkan inputan data index 1 ulang
+
+        guaryy[1]= 'mayyyyyyy sayang' ; //maka data index 0 yang hilang akan tergantii yaa
+        // lalu bisa di cek di consol inspect yaitu dengan consol.info ataupun consol.tabel
+
+        console.table(guaryy);
+
+        //bisa juga menambahkan array di dalam array 
+        guaryy[5]=[1,2,3,4,4]; //nested array ya adik adik
+
+        console.table(guaryy);
+
+        // nah berikut meruppakan konsep arary di javascript yaaa
+
+        //tipe data object
+        // tipe data ini hampir sama dengan array cuma yang membedakan hanyalah pada inisalisasi awalnya
+        // tidak seperti array yang [1]-> kan ini index harus berupa tipedata number yaitu 1.2.3.4.5 dll
+        // di tipe data object ini bisa dikatakan index nya bisa string tidak number jd lebih mudah
+        // taapi di tipe data objek ini namanya bukan index tapi properti
+        // dan menggunakan kurung kurawa
+
+        const objek = { 
+            "nama" : "Gede Hari Yoga Nanda" ,
+            "umur" : 19 ,
+            "kelas" :"D3 IT A" 
+        }
+
+        console.table(objek);
+
+        // cara mengakses properti darin tipe data inii
+
+        console.info(` NAMA CLIEN : ${objek.nama}`);
+        console.info(` UMUR CLIEN : ${objek.umur}`);
+        console.info(` KELAS CLIEN : ${objek.kelas}`);
+
+
+        // di tipe data ini seperti array kita bisa memodif nya dengan menghapus ataupun mengganti value
+
+        delete objek["umur"]; // jangan lupa setiap string harus setrip 2 atas
+
+        objek["umur"]= 20 ;
+
+        console.table(objek);
+
+        // alhasil ini mirip sama dengan array hanya ada sedikit perbedaan dan tipe data ini
+        // akan digunakan kebanyakan dalam web kita
+
+        // IF,ELSE IF, ELSE EXPRESION
+
+        const nilai2 = 50;
+
+        if (nilai2 > 80){
+            document.writeln("Selamat nilai anda A");
+            document.writeln("Keren Kau dick");
+        } else if (nilai2 > 70) {
+            document.writeln("Selamat nilai anda B ");
+        } else if (nilai2 > 60){
+            document.writeln("Selamat nilai anda C ");
+        } else {
+            document.writeln("ORA LULUS NEXT YEAR NEH YA");
+        }
+
+        // untuk tampilan POP UP
+
+        // const kubek = prompt ('lebokno jenengmu') menampilkan pop up isi suatu kalimat
+
+        // const utama = alert ("welkam home"); hanya menampilkan bilah peringatan atau tuisan deklarasi ajaa
+
+        // const popup = confirm('apakahh anda mau masuk web ini??'); // untuk konfirm dalam bolean nanti akan ada tombol iya dan tidak
+        
+        // if (popup){
+        //     const nama = prompt('masukkan nama anda');
+        //     alert(` heloo brow ${nama} welkam di web aing`)
+        // } else {
+        //     alert("yowes ngalio cok")
+        // }
+
+        // swich case
+        document.writeln("</br>");
+        
+        const nilai3 = "A";
+
+        switch (nilai3) {
+            case "A" : 
+                 document.writeln("Selamat nilai anda A ");
+                 break;
+            case "B" : 
+            case "C" : 
+                 document.writeln("Selamat nilai anda B ");
+                 break;
+
+            case "D" : 
+                 document.writeln("Selamat nilai anda C ");
+                 break;
+
+            default :
+                document.writeln("Selamat Anda TOLOL ");
+
+        }
+
+        //OPERATOR TERNARY
+
+        const yoloo = 90;
+        const ucapan = yoloo <=100 ? "selamat anda gg" : "selamat anda thuru" ; // awal bernilai jika true dan kedua jika bernilai false
+
+        document.writeln(` ${ucapan}`);
+        
+        document.writeln("</br>");
+
+        // jadi operator ternary ini mempersinghkat kerja kita. noted ini important jd gausah ngge if else sg dowo
+        
+
+        // nullish operator
+        // operator ini untuk pengecekan pada tipe data undifined dan null
+        // agar null dan undifined ini tidak tertampilkan di layar
+
+        let noul ; // ini kan false karena data undifined
+        // jika atas bernilai true maka akan ditampikan inisialisasinya
+
+        let undifin= noul;;
+
+        undifin = noul ?? "Data Default" ; // sama kyk ternary tapi tanya 2 yaaas
+
+        document.writeln(`${undifin}`); // jadi disini untuk pengecekan nya danjika true dri atas akan menghasilkan data yng kita inputkan
+
+        // opsional changing
+        // di opsional changing ini untuk pengecekan 
+        // hanya tambahkan ? pada kata terakhir yang ingin dicek
+
+        const oP = ("null");
+
+        let changing = oP?.adress?.changing;
+
+        document.writeln(`${changing}`); // akan mnghasilkan undifined karena akses ke adress di cons OP tidak ada
+
+        
+        // LOOPING
+
+        const i= 1;
+        const j= 1;
+
+        for (let i=0; i<=10;i++){
+            for (let j=0; j<=10;j++){
+            }
+            document.writeln(`<p>${i}-${j}</p>`);
+        }
+
+        const namaa = (" Gede Hari Yoga Nanda");
+
+        for (const character of namaa){
+            document.writeln(`<p>${character}</p>`);
+        }
+
+        // function 
+
+        function danCok(){
+            document.writeln("<p> ALOO DICK </p>");
+        }
+
+        // dipanggil di bawah dari function
+        danCok();
+        danCok();
+        danCok();
+        danCok();
+        danCok();
+
+        // jadi function digunakan agar bisa dipanggil berkali kali
+
+        // function parameter
+
+        function angga (firstName,lastName ){
+            document.writeln(`<p> heloo dick ${firstName} ${lastName} </p>`)
+        }
+
+        angga("angga", "aisha");
+        angga("ari", "dekcah");
+
+        // function return value
+        
+        function aisha (firstName, lastName){
+            const cari = `hello ${firstName} ${lastName}`;
+            return cari;
+
+        }
+        const panggilAn = aisha ("angga", "aisha");
+        document.writeln(`${panggilAn}`);
+        const panggilAn2 = aisha ("60", "100");
+        document.writeln(`<p>${panggilAn2}</p>`);
+
+        // function bisa lebih dari satu return value
+
+        function nilaiAkehir (niLai){
+            if (niLai > 90){
+                return "A";
+            }else if (niLai > 80){
+                return "B";
+            }else if (niLai > 70){
+                return "C";
+            }else if (niLai > 60){
+                return "D";
+            }else{
+                return "E";
+            }
+        }
+
+        const nilaiReturn = nilaiAkehir(91);
+        document.writeln(`<p> nilai akhir adalah  ${nilaiReturn} </p>`);
+        const nilaiReturn2 = nilaiAkehir(86);
+        document.writeln(`<p> nilai akhir adalah  ${nilaiReturn2} </p>`);
+        const nilaiReturn3 = nilaiAkehir(50);
+        document.writeln(`<p> nilai akhir adalah  ${nilaiReturn3} </p>`);
+
+        function pengeCekan (array,searchValue){
+            for (const element of array){
+                if ( element === searchValue){
+                    return true;
+                }
+            }
+            return false;
+        }
+
+        const anggA = pengeCekan ([1,2,3,5,34,3,5,2], 3); // jika return value harus ditangkap dari retrun atas jadi harus dibikin variabel baru 
+        document.writeln(`yaitu ${anggA}`);
+        
+        // rest parameter
+        // direst ini bebas kita menginputkan parameter berapa intie losssss deck
+
+        function som(name, ...data){ // dibikin ... data karena ini membuat parameter bebas berapa atau unlimited inisialisasi
+            let total = 0 ;
+            for (const item of data) {
+                total = total + item;
+            }
+            document.writeln(`<p> item yang anda pilih adalah ${name} bertotal ${total} </p>`);
+        }
+        som("buahnaga", 10, 20 ,30 ,40 ,50 ); // untuk parameter unlimited atau bebas berapa aja
+        
+        // jika kita coba masukin parameter rest ke array pdhal atas itu string ,maka hasilnya
+        const values= [1,2,3,4,45];
+        som("iniarrayrestTest", value); // nah ini hasilnya akan ambigu atau gajelas
+
+        // jadi kita akali dengan sphread syntax ini membuat agar array dpt masuk
+
+        const valu= [1,2,3,4,45];
+        som("iniarraytextsyntax", ...valu); // jadi harus ditambahkan ... agar bisa terdeteksi array bisa masuk di parameter
+
+        // anoymous functions
+        // kebnayakan  nti akan dugunskan di aplikasi untuk javascript
+
+        let tsay = function (nama1){ // tanpa nama function ini  merupakan annoymous function
+            document.writeln(`<p> hallooooo ${nama1} </p>`);
+        }
+
+        tsay ("Hari"); // dipanggil hanya variabel atas saja 
+        tsay ("Yoga");
+        tsay ("Hari");
+        tsay ("Nanda");
+
+        // annoymous function dalam parmeter
+        
+        function givmaName (callback){
+            callback("angga");
+        }
+
+
+        givmaName (function (nama2){
+            document.writeln(`<p> oiiii ${nama2} </p>`);
+
+        })
+
+        // function dalam function
+
+        function outer (){
+            
+            function inner (){
+                console.info("valid");
+            }
+            inner();
+            inner();
+
+        }
+        outer();
+
+        // global scope dan lokal scopee
+
+        // ini merupakan global scope
+        let sekop = 2;
+
+        // ini masih wilayah global scope
+        function hitMe (){
+            // didalam kurung kurawa sudah ke local scope
+            sekop++;
+        }
+
+        function hitMe2 (){
+            // ini lokal sekop dalam kurawa tp diatas function hitMe2 adlah global
+        }
+
+        hitMe(); // lalu dipanggil
+        hitMe();
+
+        console.info(sekop);
+
+        // looping membuat factorial menggunkan recursif fungction atau memasukan function didalam perulangan
+
+        function faktorial (valiu){
+            let hasel = 1;
+            for (let i = 1 ; i <= valiu ; i++){
+                hasel = hasel * i;
+            }
+            return hasel;
+        }
+        console.info(faktorial(10)); // diinspect
+
+        // nah ini bisa dipermudah dengan resursif fungction
+
+        function recursif(hasel2){
+            if(hasel2 == 1){
+                return 1;
+            } else {
+                return hasel2 * recursif(hasel2 - 1);
+            }
+        }
+        console.info(recursif(10)); // hasilnya sama ketika di inspec dan lebi simpel
+
+        // yield 
+        function* ganjil(hasel3){
+            for (let i =1; i <= hasel3 ; i++){
+                if (i % 2 === 1){
+                    yield i;
+                }
+            }
+        }
+
+        const tot = ganjil(10);
+        for (const number of tot) {
+            console.info(number);
+        }
+
+
+        // arrow function
+
+        // const funcction = (namaru) => console.info(namaru);
+
+        // funcction ("aishaa")
+
+        const funcction = namaru => console.info(namaru);
+
+        funcction ("aishaa")
+        //  cara atas ini lebi mudah jika praamter hanya 1 gausah di kurung
+
+        // bisa juga didalam parameter
+
+        function giveanama(callbackk){
+            callbackk("asiha");
+        }
+
+        giveanama(namee => console.info(namee));
+
+        
+        // objeck method
+        // ketika obyek nya terlanjur kita buat si eko ini kita bisa megubah
+
+        // cara 1
+        // const maya = {
+        //     nama : "eko",
+        // bisa juga pake arrow function tinggal hapus si function ganti arrow
+        //     sayHello : (nama0) => // lalu lgsung masukkan document writln
+        //     sayHello : function (nama0){
+        //         document.writeln(`${nama0}`);
+        //     }
+        // };
+
+        // maya.sayHello("ayang");
+
+        // dia akan menmampilkan si say hello dari cons maya
+
+        // cara 2
+        const mayaa = {
+            nama : "eko",
+        };
+
+        // bisa jg pakai arrow function
+        mayaa.sayHello = function (nama01){
+            document.writeln(`<p> ${nama01} </p>`);
+        };
+
+        mayaa.sayHello("ayang");
+
+        // kata kunci this
+        const maya = {
+            nama : "eko",
+            sayHello : function (nama0){
+                // document.writeln(` hello ${nama0} my name is ${maya.nama}`); // ini gabisa dick
+                document.writeln(` hello ${nama0} my name is ${this.nama}`); // kudu ngene
+                // jd this ini untuk akses ke parameter const maya
+                // dan bisa menampilkan si maya.nama nya jika lgsung di atas gabisa
+                // jadi harus ada this nya agar kita bisa mengakses si maya dalem nya
+            }
+        };
+
+        maya.sayHello("ayang");
+
+        // destructuring array
+        // ini versi simpel ya dikadik
+        // dan sNGt berguna dan ez
+
+        const array = ["gede", "hari", "yoga", "nanda", "angga", "aisha"];
+        const [nama1,nama2,nama3, ...lainne] = array ; // bisa memakai titik 3 untuk lainnya
+
+        document.writeln(`<p> ${nama1} </p>`);
+        document.writeln(`<p> ${nama2} </p>`);
+        document.writeln(`<p> ${nama3} </p>`);
+        document.writeln(`<p> ${lainne} </p>`); // dan tinggal di lainne nanti menghasilkan semua di ...lainne
+
+        // bisa juga destruct untuk obyek
+
+        const kuro = {
+            namaku : "gede",
+            midlename : "yoga",
+            lastnam : "nanda", 
+            alamat : {
+                negara : "indog",
+                deso : "serut",
+                nomor : "56"
+
+            }, // harus ditambah koma
+            pacar : "mayadaazizah",
+            cantikga : "jelascantikdik"
+        };
+        // diobjek harus pake kurawa untuk akses parameter
+        const {namaku,midlename,lastnam,alamat, ...laine} = kuro ;
+
+        console.info(laine)
+        console.info(alamat)
+        document.writeln(`<p> ${namaku} </p>`);
+        document.writeln(`<p> ${midlename} </p>`);
+        document.writeln(`<p> ${lastnam} </p>`);
+
+        // bisa juga akses per variabel dari alamat
+        // yaitu dengan 
+        //   const {namaku,midlename,lastnam,alamat : {negara,deso,nomor}, ...laine} = kuro ;
+        // gitu dick
+
+        // pakai use strict untuk mengetahui eror eror jelas
+        // caranya yaoti misal fungction itu nulisnya dibawah function kurawa kyk string biaasa
+        // 'use strict'
+
+        // fitur debugger
+        // ngge cek bug dick
+        // hanya perlu nulis gini
+        // debugger;
+
+        // thats it for materi
+
+    </script>
+    
+</body>
+</html>

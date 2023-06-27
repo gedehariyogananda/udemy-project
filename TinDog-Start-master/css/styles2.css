@@ -1,0 +1,206 @@
+/* agar scrolling smooth */
+html{
+    scroll-behavior: smooth;
+}
+/* tampilan body */
+body{
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.container-fluid{
+    padding: 1% 15%;
+}
+
+#title{
+    background-color: #ff4c68;
+}
+ 
+/* detail navbar */
+
+
+.navbar-brand{
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 2rem;
+}
+
+.navbar-nav {
+    margin-left: 50%;
+    font-size: 1.3rem;
+}
+
+.font{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: white;
+    font-size: 4rem;
+    line-height: 1.5;
+    padding-top: 4rem;
+    padding-bottom: 2rem;
+}
+
+.btn:hover{
+    color: #ff4c68;
+
+}
+
+
+.foto{
+    padding-top: 2rem;
+    padding-left: 6rem;
+    width: 90%;
+    height: 95%;
+    transform: rotate(20deg);
+}
+
+@media (max-width : 988px) {
+#title {
+    text-align: center;
+ }
+
+.foto {
+    transform: rotate(0);
+    width: 50%;
+    padding-right: 4rem;
+}
+ 
+
+
+    
+}
+/* donehome */
+
+/* nextkedua */
+
+#features{
+    padding: 2% 5%;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.pitur{
+    text-align: center;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: #ff4c68;
+    font-size: 4rem;
+    line-height: 1.5;
+    padding-top: 1.5rem;
+}
+
+.col-lg-4{
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+.col-lg-4 h3{
+    font-size: 2rem;
+}
+
+.col-lg-4 p{
+    font-size: 1.5rem;
+    color:grey;
+}
+
+.hover{
+    color: #ff4c68;
+}
+
+.hover :hover{
+    color: red;
+    
+}
+
+/* testimonial fitur */
+
+#testimonials {
+    text-align: center;
+    padding: 1% 15%;
+    font-family: 'Ubuntu', sans-serif;
+    background-color: #ff4c68;
+}
+
+#testimonials img{
+    width: 30%;
+}
+
+#testimonials h1{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: #fff;
+    font-size: 4rem;
+    line-height: 1.5;
+    padding-top: 1.5rem;
+}
+
+#testimonials h2{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: black;
+    font-size: 2rem;
+    line-height: 1.5;
+    padding-top: 1.5rem;
+}
+
+/* iklan diks */
+
+#press{
+    background-color: #ff4c68;
+
+}
+
+#press img{
+    width: 15%;
+    text-align: center;
+    margin-left: 100px;
+    margin-bottom: 40px;
+    margin-top : 40px;
+}
+
+/* prisinggaero */
+
+#pricing{
+    text-align: center;
+    padding: 2% 12%;
+}
+
+#pricing h2{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: #ff4c68;
+    font-size: 3rem;
+    line-height: 1;
+    padding-top: 0px;
+}
+
+#pricing h3{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+#pricing p{
+    font-family: 'Ubuntu', sans-serif;
+    color: #ff4c68;
+    font-size: 1rem;
+    line-height: 1;
+    padding-top: 1rem;
+}
+
+/* 
+calltueksio,m, */
+
+#cta{
+    text-align: center;
+    background-color: #ff4c68;
+    padding: 5% 15%;
+    margin-top: 60px;
+}
+
+#cta h3{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: #fff;
+    font-size: 4rem;
+    line-height: 1.5;
+}
+
+/* footers */
+#footer{
+    text-align: center;
+    background-color: #fff;
+    padding-top: 3rem;
+    padding-bottom: 1rem;
+}

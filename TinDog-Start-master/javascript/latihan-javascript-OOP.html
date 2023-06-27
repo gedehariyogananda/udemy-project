@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Latihan OOP javascript</title>
+</head>
+<body>
+<script>
+
+    // kita akan membuat OOP
+    // pertama construction function
+    // ibarat wadah ygy
+
+    // ini cara lawas
+    // usahain nama variabel nya depan nya besar untuk agar kita tahu bwh itu consctrution
+    // function Person (fullName,alamat,asalUniv){ // ini adalah wadahnya nanti dipanggil di bawah
+    //     this.fullName = fullName ; // ditambah this agar bisa diakses
+    //     this.alamat = alamat ; 
+    //     this.asalUniv = asalUniv ;
+    //     // bisa juga menambahkan function didalam cetakan construction
+    //     // dan dapat dipanggil juga
+    //     this.panggilan = function (panggilan){
+    //         console.info (` Hello ${this.fullName} biasa dipanggil ${panggilan} yaa.. Welkam tu maii websitee yoo `);
+    //     }
+    // }
+
+    // // ditambah kata new untuk membuat construction
+    // const budi = new Person( "Budi Daya Satria Baja Hitam","Serut Boyolangu" , "UB" ) ;
+    // budi.panggilan("Budi");
+
+    // const deni = new Person("Deni Sumargo", "Boyolangu" ,'PENS' );
+    // deni.panggilan("Deni");
+
+    // console.table(budi);
+    // console.table(deni);
+
+    // // ini uuntuk mengkopi functions atas
+
+    // function Employee(firstName){
+    //     this.firstName = firstName ;
+    //     this.sayHello = function (name){
+    //         console.info(`hello ${name} ma name is ${this.firstName}`)
+    //     }
+    // }
+
+    // function Copian (firstName,lastName){
+    //     this.lastName = lastName ;
+    //     // di tambah parameter yg ingin dicopy lalu .call untuk dipanggil
+    //     Employee.call(this,firstName);
+    // }
+
+    // const ekontl = new Copian ("angga", "aisha");
+    // console.info(ekontl);
+
+    // di ecma script 6 ini pake class ygy modern
+    // ga ngge sg atas atau function
+    // ini direkmonedasikan
+  
+    class Peerson {
+        constructor(nama){
+            // lhgsung ddi construction nya ya ini 
+            this.nama = nama;
+            // console.info(`ini merupakan ${nama}`);
+        }
+
+        // method di class
+        // nanti akan ada di prototipe
+        sayheLo(nama){
+        console.info(`ini merupakan ${nama} dan ${this.nama}`);
+
+        }
+    }
+
+    const perr = new Peerson ("budi");
+    console.info(perr);   
+    console.info(perr.nama);
+    perr.sayheLo('JOko');
+    const berr = new Peerson ("audi");
+    console.info(berr);   
+    console.info(berr.nama);
+    berr.sayheLo("sukidi");
+
+   // pewarisan di class
+
+   class Employee {
+    constructor(firstName){
+        this.firstName = firstName;
+    }
+       sayHello(name){
+            console.info(`heloo ${name} ini employee ${this.firstName}`);
+      }
+   }
+
+    // dikasi kata kunci extends untuk pewarisan atau copt atas
+    class Manager extends Employee{
+        constructor(firstName,lastName){
+            super(firstName);
+            this.lastName = lastName;
+        }
+        sayHello(name){
+            console.info(`heloo ${name} ini Manager ${this.firstName} ${this.lastName}`);
+        }
+    }
+    const ari = new Employee("Gede");
+    ari.sayHello("joko");
+
+    const angga = new Manager('Yoga', 'Nanda');
+    angga.sayHello("rusid" );
+
+    console.info(ari);
+    console.info(angga);    
+
+    // stativ field
+
+    class Static {
+        static nama = "belajarr bahasa jepang" ;
+        static version = 2.2;
+        static namacipta = "gede hari yoga nanda" ;
+
+    }
+
+    console.info(Static.nama);
+    console.info(Static.version);
+    console.info(Static.namacipta);
+
+    // static method
+
+    class Math {
+        static sum(...nomor){
+            let total=0;
+            for (const number of nomor) {
+                total = total + number;
+                
+            }
+            return total;
+        }
+    }
+
+    const result = Math.sum(1,2,3,4,5,6,7);
+    console.info(result);
+
+</script>
+
+</body>
+</html>

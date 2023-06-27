@@ -1,0 +1,157 @@
+UDEMY LIBRARY
+-------------
+noted: sehari minimal 20 modul
+------------------------------
+catatan library :
+mdn html css bootstrap docs.
+getbootstrap.com docs
+font awesome
+------------------------------
+
+<hr size="3"> untuk garis bawah bersize
+<!-- ..... --> untuk meberi catatatan pada html
+<em> untuk memiringkan paragraf 
+<strong> untuk menebalkan dan bisa berada di dalam tag <em> dan tag <p>
+<ul> untuk membuat list kyk bunder kecil lalu didalamnya ada <li> untuk 
+penamaan urutan.
+<ol> untuk membuat list dalam bentuk penomoranm dan jangan lupa <li>
+juga untuk penamaaan urutan nya.
+<table> untuk tampilan urut rapi seperti table
+----> cellspacing="20" untuk size antara gambar kiri dan row kanan
+----> border="3" untuk memberikan tampilan border pada table
+<thead> untuk kepala dari induk table
+<tr> untuk table row atau kolom nya (kesamping brp)
+<th> untuk penamaan table head
+<td> untuk caption bawah atau penamaan tbody
+form action="mailto:ariyoga.ga@gmail.com" untuk agar form bisa dialokasi memori data ke email kita
+
+css-
+
+noted:
+untuk mencari refrensi warna di web colorhunt.co
+w3school default values,devdocs.oi/css -> CSS lalu control F untuk mencari refrensi CSS
+
+pakai width 100% persentase agar viewport tepat full screen
+border : solid untuk pingir dari tampilan ada batas
+border-width : 50px jarak pinggir lebih jauh dan menyeluruh sebesar 50 
+border top : 0px untuk tampilan top 0px lainnhya ttp 50px
+dan 
+
+border-width: 0px 10px 20px 30px; 
+---------->  0px untuk tampilan atas atau top 0px
+             10px untuk tampilan kanan 10px
+             20px untuk tampilan bawah 20px
+             30px untuk tampilan kiri 30px
+
+
+padding untuk ukuran antara text atas bawah kiri kanan dalam
+margin untuk luar batas
+
+position : relative; untuk inisialisasi awal agar posisi
+sesuai dgn yang kita inginkan dan bisa diedit.
+dan jika dibawah position kita tambahn left:20px maka posisi dari relative akan bergeser dari kiri 
+20px ke kanan
+
+position:absolute; untuk inisialisasi posisi awal berada di suatu atas
+sarang div atau induk div lalu bisa diatur size nya dimana saja.
+jika ditambahn left:20px; posisi akan bergeser dari kiri sejauh 20px
+jika top 20px maka posisi dri atas ke bawah 20px.
+- position:fixed; untuk posisi tetap berada di area tersebut walaupun
+kita scrolling. digunakan untuk misal navigasi bar
+
+display: inline; untuk tampilan  display sejajar
+display: inline-block; tampilan sejajar serta ngeblock jg
+
+untuk pemilihan font pada display css agar semua device bisa melihatnya
+sesuai dengan yang kita inputkan maka menggunakan link saja
+bisa dicari font livk di GOOGLE.FONT bisa dipilih
+sans serif atau serif contoh bs mencari MERRIWEATHER lalu copy an dari 
+font ditaruh di bagian index.html tau index awalan link lalu
+di paste. dan akan terubah semua forn ke sesuai dengan link tsb,
+
+website untuk berbagai macam foto bagus flaticon.com
+website untuk berbagaii gift fi giphy
+
+size dari font kita buat persen agar semua device bisa melihat dan ke auto
+sesuai dengan tampilan
+cara menghitung persenaan dari px adalah 
+contoh 90px jadi 90/16=562.5 dan di persenkan jadi 562.5% 
+begitupun dengan rem sama dan lebi efektif rem karena 
+bisa disize aman yaitu 562.5rem.
+
+font height : 2 .untuk menambah space dri font jadi nanti tampilan nya akan kebawah sebesar 2
+
+float:left; untuk membuat tampilan inisialisasi misal teks dan gambar bisa memodelisasi 
+ke kanan teks nya dari gambar. termasukpun float right
+
+lalu css clear untuk mengcler dari div pembungkus agar tidak
+terkena efek bungkusan. misal jika kita float left
+jadi clear:left; dia akan meng clear pembungkus dari left float
+dan akan merubah tampilan ke bawah.
+
+jika build menggunakan div dan ingin memberi jarak antar gambar dan
+tulisan yang di flot maka menggunakan margin right jika gambar dikiri
+dan teks dikanan dan ditaruh di inisialisasi css gambarb
+
+line-height:2; untuk ketinggian garis bs dari text yang ingin diberi
+jarak mupun lainnya
+
+BOOTSTRAP 
+---------
+
+control F untuk mencari pencharian di html or css agar memudahkan
+mencari pencarian kata
+control + untuk meembuat teks html menjadi tidak terdetect
+contoh refrensi UI ada di pola-ui.com
+untuk melihat beberapa prototipe orang gg keren ygy ada di dribbble.com\
+untuk membuat tampilan mookup bisa di sneakpeekit dan paling
+rekomendasi di balsamiq.cloud
+
+ms-auto kan membuat margin ke auto atau hasil maksimal dari space magrin nya ke kanan mentoks\
+
+col bootstrap max 12 col jika 6 akan setengahnya layar
+col-md untuk responsif col
+
+col-lg col-md col-sm
+
+bootstrap carousel untuk tampilan slideshow di html
+data interval 1000 merupakan durasi nya 1 detik dan autoplay
+
+bootstrp card
+
+z-index untuk membuat tampilan lauyout atas dan bawah bisa terpotong
+dan harus di posisi relatuiv or stativ or absolute dl
+baru z index di kasi nilai 1 oe -1 otak atik deh
+
+media kueri
+ini untuk mengfatur responsif css dikadik
+jadi bisa nagtur responsif di tablet dekstop dan hp
+format dik
+@media (max-width : 988px) {
+#title {
+    text-align: center;
+ }
+
+.foto {
+    transform: rotate(0);
+    width: 50%;
+    padding-right: 4rem;
+}
+ 
+W3ELCOME JAVASCRIPT
+--------------------
+
+var untuk menyimpan inisalisasi data suatu wadah
+dan cuma ada 1 didalam suatu wadah
+
+alert untuk pop peringatan
+
+syntax
+alert("helo");
+
+p
+
+
+
+
+
